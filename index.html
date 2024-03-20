@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <fieldset class="info">
+            <legend>Profile</legend>
+
+            <label for="fullname">Full Name *</label>
+            <input type="text" name="fullname" autocomplete="name" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required>
+
+            <label for="dob">Date of Birth *</label>
+            <input type="date" name="dob" autocomplete="off" required>
+
+            <div class="cp">
+                <div class="cp_inner">
+                    <label for="country">Country *</label>
+                    <input type="text" name="country" autocomplete="country" required>
+                </div>
+
+                <div class="cp_inner">
+                    <label for="province">State/Province</label>
+                    <input type="text" name="province" autocomplete="address-level1">
+                </div>
+            </div>
+
+            <label for="farmsize">Farm Size (in hectares)</label>
+            <input type="number" name="farmsize" min="1" value="1">
+            <div class="note">You cannot register less then 1 hectare of farmland in this scenario</div>
+
+            <label for="family">Family Size (in persons)</label>
+            <input type="number" name="family" value="0">
+        </fieldset>
+        <fieldset>
+            <legend>Crops</legend>
+            
+            <div class="crop">
+                <input type="checkbox" name="wheat" checked disabled>
+                <label for="wheat">Wheat</label>
+            </div>
+
+            <div class="crop">
+                <input type="checkbox" name="coffee">
+                <label for="coffee">Coffee</label>
+            </div>
+
+            <div class="crop">
+                <input type="checkbox" name="sugar">
+                <label for="sugar">Sugar</label>
+            </div>
+
+            <div class="crop">
+                <input type="checkbox" name="millet">
+                <label for="coffee">Millet</label>
+            </div>
+
+            <div class="crop">
+                <input type="checkbox" name="banana">
+                <label for="banana">Banana</label>
+            </div>
+
+            <div class="crop">
+                <input type="checkbox" name="cocoa">
+                <label for="cocoa">Cocoa</label>
+            </div>
+
+            <div class="crop">
+                <input type="checkbox" name="papaya">
+                <label for="papaya">Papaya</label>
+            </div>
+        </fieldset>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
